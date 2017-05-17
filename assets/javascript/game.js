@@ -11,6 +11,7 @@
       var guessesLeft = 10;
       var guessed = [];
       var letterToGuess = null;
+      var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
 
               var reset = function(){
@@ -23,9 +24,8 @@
       // When the user presses a key, it will run the following function...
       document.onkeyup = function(event) {
 
-
         var userGuess = event.key;
-        var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+     
         guessesLeft--;
         guessed.push(userGuess);  
         document.querySelector("#guessed-letters").innerHTML = guessed.join(" ");
