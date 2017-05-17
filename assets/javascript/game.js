@@ -10,7 +10,6 @@
       var losses = 0;
       var guessesLeft = 10;
       var guessed = [];
-      var letterToGuess = null;
       var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
 
@@ -18,7 +17,8 @@
  
                guessesLeft = 10;
                guessed = [];
-               letterToGuess = null;
+               computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
                        };
 
       // When the user presses a key, it will run the following function...
@@ -46,7 +46,7 @@
                       document.querySelector("#wins").innerHTML = wins;
                       alert("You read my mind!");
                       reset();
-                      }
+                      }console.log(computerGuess);
      
               } 
                document.querySelector("#guessed-letters").innerHTML = guessed.join(" ");
